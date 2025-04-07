@@ -1,0 +1,194 @@
+/* Základní nastavení */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.barrio-regular {
+    font-family: "Barrio", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.barriecito-regular {
+    font-family: "Barriecito", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.atma-light {
+    font-family: "Atma", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .atma-regular {
+    font-family: "Atma", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .atma-medium {
+    font-family: "Atma", system-ui;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .atma-semibold {
+    font-family: "Atma", system-ui;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .atma-bold {
+    font-family: "Atma", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+
+
+body {
+    font-family: 'Atma', cursive, sans-serif;
+    line-height: 1.6;
+    background-color: #D0F4FF;
+    color: #2D3142;
+    padding: 20px;
+}
+
+/* Hlavička */
+header {
+    position: relative;
+  background: url('images/489403838_1221660406629871_6943691730760151120_n.jpg') center/cover no-repeat;
+  color: #fff;
+    color: #fff;
+    text-align: center;
+    font-family: barrio;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  overflow: hidden;
+height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 57, 71, 0.45);
+    z-index: 0;
+  }
+
+  .header-nadpis {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 65px;
+  margin-bottom: 10px;
+}
+
+header p {
+    font-size: 25px;
+  }
+
+/* Navigace */
+nav {
+    margin-top: 20px;
+  background-color: #38B6FF;
+  border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 15px 28px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+    font-size: 18px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #2D3142;
+  }
+
+
+
+
+/* Hlavní obsah */
+main {
+    padding: 70px;
+    background: #F1FA3C;
+    background: url(images/pozadi2.jpg) center/cover no-repeat;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .uvod{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .uvod h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .vitejte{
+    display: flex;
+    gap: 70px;
+  }
+
+  .vitejte p{
+    font-size: 25px;
+    width: 50%;
+  }
+
+  .uvod img{
+    height: 250px;
+    border-radius: 15px;
+  }
+
+  .vlacek img{
+    width: 200px;
+    height: auto;
+  }
+  
+  .program ul {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+/* Paticka */
+footer {
+    text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #666;
+}
