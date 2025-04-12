@@ -21,32 +21,32 @@
     font-family: "Atma", system-ui;
     font-weight: 300;
     font-style: normal;
-  }
-  
-  .atma-regular {
+}
+
+.atma-regular {
     font-family: "Atma", system-ui;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  .atma-medium {
+}
+
+.atma-medium {
     font-family: "Atma", system-ui;
     font-weight: 500;
     font-style: normal;
-  }
-  
-  .atma-semibold {
+}
+
+.atma-semibold {
     font-family: "Atma", system-ui;
     font-weight: 600;
     font-style: normal;
-  }
-  
-  .atma-bold {
+}
+
+.atma-bold {
     font-family: "Atma", system-ui;
     font-weight: 700;
     font-style: normal;
-  }
-  
+}
+
 
 
 
@@ -59,84 +59,142 @@ body {
 }
 
 /* Hlavička */
-header {
+header .header-nadpis {
     position: relative;
-  background: url('images/489403838_1221660406629871_6943691730760151120_n.jpg') center/cover no-repeat;
-  color: #fff;
+    background: url('images/489403838_1221660406629871_6943691730760151120_n.jpg') center/cover no-repeat;
+    color: #fff;
     color: #fff;
     text-align: center;
     font-family: barrio;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 15px;
-  overflow: hidden;
-height: 40vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
 
-header::before {
+header .header-nadpis::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(230, 57, 71, 0.45);
     z-index: 0;
-  }
+}
 
-  .header-nadpis {
+.header-nadpis h1, .header-nadpis p {
     position: relative;
     z-index: 1;
 }
 
 header h1 {
     font-size: 65px;
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 header p {
     font-size: 25px;
+}
+
+#nav-trigger {
+    height: 1px; /* malý neviditelný prvek nad navigací */
   }
+  
 
 /* Navigace */
 nav {
     margin-top: 20px;
-  background-color: #38B6FF;
-  border-radius: 10px;
+    background-color: #38B6FF;
+    border-radius: 10px;
     overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1000;
+  
+    /* FLEXBOX NASTAVENÍ */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px; /* prostor vlevo/vpravo */
   }
   
+  /* Levý nadpis */
+  .cestovadelko-nav {
+    font-size: 24px;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+    font-family: barrio;
+    width: 0;
+  }
+
+  .cestovadelko-nav a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Aktivace nadpisu při sticky */
+  nav.sticky .cestovadelko-nav {
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+  }
+  
+  /* Navigace uprostřed */
   nav ul {
     display: flex;
     justify-content: center;
+    flex: 1; /* zabere celý středový prostor */
     list-style: none;
-  }
-  
-  nav ul li {
     margin: 0;
+    padding: 0;
+    transition: all 0.4s ease;
   }
   
+  /* Položky v navigaci */
   nav ul li a {
     display: block;
     padding: 15px 28px;
     color: #fff;
     text-decoration: none;
-    transition: background 0.3s;
     font-size: 18px;
+    transition: all 0.4s ease;
   }
   
   nav ul li a:hover {
     background-color: #2D3142;
   }
+  
+  /* Sticky efekty */
+  nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav.sticky ul li a {
+    padding: 18px 30px;
+    font-size: 19px;
+  }
+  
 
 
 
 
 /* Hlavní obsah */
 main {
-    padding: 70px;
+    padding: 50px 0;
     background: #F1FA3C;
     background: url(images/pozadi2.jpg) center/cover no-repeat;
     margin-top: 20px;
@@ -146,49 +204,215 @@ main {
 
 .box {
     padding: 20px;
-    margin-bottom: 20px;
-  }
-
-  .uvod{
+    margin-bottom: 50px;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
-  }
+    max-width: 900px;
+    
+}
 
-  .uvod h2{
+.box h2 {
     font-size: 30px;
     margin-bottom: 15px;
-  }
+}
 
-  .vitejte{
-    display: flex;
-    gap: 70px;
-  }
+.uvod{
+    text-align: center;
+    
+}
 
-  .vitejte p{
-    font-size: 25px;
-    width: 50%;
-  }
+.vitejte p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
 
-  .uvod img{
-    height: 250px;
-    border-radius: 15px;
-  }
 
-  .vlacek img{
-    width: 200px;
+.vlacek img {
+    width: 180px;
     height: auto;
-  }
-  
-  .program ul {
+}
+
+.program ul {
     margin-top: 10px;
     padding-left: 20px;
-  }
+}
+
+.nabidka {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* pokud by se nevešly na menší obrazovky */
+    text-align: center;
+}
+
+.nabidka-obrazek{
+    overflow: hidden;
+  border-radius: 10px; /* volitelné pro zaoblení */
+  height: 250px;
+  width: 250px;
+  margin-bottom: 12px;
+}
+
+.nabidka-obrazek:hover img{
+    transform: scale(1.1);
+}
+
+.nabidka img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    /* volitelné, pokud chceš oblé rohy */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* volitelné, pokud chceš lehký stín */
+    transition: transform 0.4s ease; /* plynulý efekt */
+}
+
+.nabidka p {
+    max-width: 240px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* omezí na 4 řádky */
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    /* Maskování pro fade efekt */
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            /* plná viditelnost nahoře */
+            rgba(0, 0, 0, 1) 50%,
+            /* ještě viditelné do poloviny */
+            rgba(0, 0, 0, 0.6) 75%,
+            /* jemně průhledné ve 3. řádku */
+            rgba(0, 0, 0, 0) 100%);
+    /* úplně průhledné dole */
+
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 50%,
+            rgba(0, 0, 0, 0.6) 75%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.nabidka a{
+    text-decoration: none;
+    color: #2D3142;
+    transition: color 0.4s ease;
+}
+
+.nabidka a:hover{
+    color: #38B6FF;
+}
+
+.odkaz-predstaveni{
+    text-align: center;
+    margin: auto;
+    padding: 10px 18px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: #38B6FF;
+    transition: background 0.4s ease;
+}
+
+.odkaz-predstaveni a{
+    color: #D0F4FF;
+    text-decoration: none;
+}
+
+.odkaz-predstaveni:hover{
+    background-color: #1d8bca;
+}
+
+.ucinkujici img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.ucinkujici{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.herci{
+display: flex;
+text-align: center;
+gap: 5%;
+justify-content: center;
+    flex-wrap: wrap;
+}
 
 /* Paticka */
 footer {
     text-align: center;
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #666;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+header .header-nadpis.head-predstaveni {
+    height: 24vh;
+}
+
+.uvadi h2 {
+    font-size: 30px;
+}
+
+.uvadi p {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.predstaveni {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.predstaveni h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.predstaveni .one p {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.predstaveni .one {
+    margin-bottom: 30px;
+}
+
+.one{
+    border: #2D3142;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.foto-predstaveni{
+    display: flex;
+    gap: 15px;
+}
+
+.one img{
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+iframe{
+    border-radius: 10px;
+    margin: 0;
 }

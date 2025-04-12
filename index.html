@@ -18,45 +18,136 @@
         <h1>Cestovadélko</h1>
         <p>Pimpilimpi a Pompolompo</p>
       </div>
+      <div id="nav-trigger"></div>
+      <!-- neviditelný prvek, kde sledujeme průchod -->
+      <nav id="navbar">
+        <div class="cestovadelko-nav">
+          <a href="index.html">Cestovadélko</a>
+        </div>
+        <ul>
+          <li><a href="#">Domů</a></li>
+          <li><a href="predstaveni.html">Představení</a></li>
+          <li><a href="fotky.html">Fotky</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <ul>
-        <li><a href="#">Domů</a></li>
-        <li><a href="#">Program</a></li>
-        <li><a href="#">Fotky</a></li>
-        <li><a href="#">Kontakt</a></li>
-      </ul>
-    </nav>
 
-    <main>
+    <main class="home">
       <section class="uvod box">
         <h2>Vítejte!</h2>
         <div class="vitejte">
-        <p>
-          Náš divadelní soubor Cestovatélko nabízí dětské muzikálové inscenace.
-          Přijďte se podívat na naše interaktivní vystoupení plné písniček,
-          masek a her, kde dva nejlepší kamarádi Pimpilimpi a a Pompolompo učí
-          děti.
-        </p>
-    <img src="images/predstaveni-balonek.jpg" alt="">
-    </div>
-    <div class="vlacek">
-    <img src="images/zeleny_vlacek.png" alt="">
-</div>
+          <p>
+            Náš divadelní soubor Cestovatélko nabízí dětské muzikálové
+            inscenace. Přijďte se podívat na naše interaktivní vystoupení plné
+            písniček, masek a her, kde dva nejlepší kamarádi Pimpilimpi a a
+            Pompolompo učí děti.
+          </p>
+        </div>
+        <div class="vlacek">
+          <img src="images/divadelko.png" alt="">
+        </div>
       </section>
 
       <section class="program box">
-        <h2>Nejbližší představení</h2>
-        <ul>
-          <li><strong>12. dubna:</strong> O Koblížkovi</li>
-          <li><strong>20. dubna:</strong> Červená Karkulka</li>
-          <li><strong>1. května:</strong> O statečném princi</li>
-        </ul>
+        <h2>Představení</h2>
+        <div class="nabidka">
+          <div class="one-nabd">
+            <div class="nabidka-obrazek">
+              <img src="images/trideni.JPG" alt="" />
+            </div>
+            <a href="predstaveni.html#zeme"
+              ><h3>Pohádka o třídění odpadu</h3></a
+            >
+            <p>
+              Mimozemšťané Pimpilimpi a Pompolompo z planety Pumpulumpu přiletí
+              na Zemi, která má problém s odpadky. Naučí lidi třídit odpad,
+              utkají se s padouchem Špínachňapem, který touží, aby Zemi odpadky
+              úplně zavalily a vysvětlí, že se ze starých věcí dají vyrobit
+              nové.
+            </p>
+          </div>
+          <div class="one-nabd">
+            <div class="nabidka-obrazek">
+              <img src="images/srdce.JPG" alt="" />
+            </div>
+            <a href="predstaveni.html#telo"><h3>Pohádka o Lidském těle</h3></a>
+            <p>
+              Mimozemšťané Pimpilimpi a Pompolompo z planety Pumpulumpu přiletí
+              na Zemi, protože slyšeli volání o pomoc. Na planetě Zemi se
+              seznámí s kostrou, srdíčkem a mozkem. Stanou se přáteli a dozví se
+              o nich spoustu věcí.
+            </p>
+          </div>
+          <div class="one-nabd">
+            <div class="nabidka-obrazek">
+              <img src="images/vanocni.png" alt="" />
+            </div>
+            <a href="predstaveni.html#zima"><h3>Zimní pohádka</h3></a>
+            <p>
+              V představení „Kačenka má ráda zimu“ se děti formou zábavného
+              muzikálu seznámí se všemi zimními svátky od sv. Martina až po
+              oslavy Nového roku, dozví se, jaké tradice se dodržují, přivítají
+              Martina na bílém koni, popovídají si s Mikulášem
+            </p>
+          </div>
+        </div>
+        <div class="odkaz-predstaveni">
+          <a href="predstaveni.html">Všechna představení</a>
+        </div>
+      </section>
+
+      <section class="obsazeni box">
+        <h2>Náš štáb</h2>
+        <div class="herci">
+          <div class="ucinkujici">
+            <img src="images/motyckova.jpg" alt="" /><strong
+              >Kateřina Motyčková</strong
+            >
+          </div>
+          <div class="ucinkujici">
+            <img src="images/depta.jpg" alt="" /><strong>David Depta</strong>
+          </div>
+          <div class="ucinkujici">
+            <img src="images/soumarova.jpg" alt="" /><strong
+              >Veronika Soumarová</strong
+            >
+          </div>
+          <div class="ucinkujici">
+            <img src="images/motycka.jpg" alt="" /><strong
+              >Roman Motyčka</strong
+            >
+          </div>
+          <div class="ucinkujici">
+            <img src="images/antosikova.png" alt="" /><strong
+              >Jitka Antošíková</strong
+            >
+          </div>
+          <div class="ucinkujici">
+            <img src="images/kucova.jpg" alt="" /><strong>Hana Kučová</strong>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2025 Adam Pospíšek</p>
     </footer>
+    <script>
+      const navbar = document.getElementById("navbar");
+      const navTrigger = document.getElementById("nav-trigger");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            navbar.classList.add("sticky");
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        });
+      });
+
+      observer.observe(navTrigger);
+    </script>
   </body>
 </html>

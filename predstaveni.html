@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Název stránky</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barriecito&family=Barrio&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-nadpis head-predstaveni">
+        <h1>Cestovadélko</h1>
+        <p>Muzikálové představení</p>
+      </div>
+      <div id="nav-trigger"></div>
+      <nav class="nav-predstaveni" id="navbar">
+        <div class="cestovadelko-nav">
+          <a href="index.html">Cestovadélko</a>
+        </div>
+        <ul>
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="predstaveni.html">Představení</a></li>
+          <li><a href="fotky.html">Fotky</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="predstaveni box">
+        <div class="uvadi">
+          <h2>Muzikálové představení</h2>
+          <p>Cestovadélko uvádí...</p>
+        </div>
+        <div class="one" id="zeme">
+          <h3>Jak Pimpilimpi a Pompolompo zachránili Zemi</h3>
+          <p>
+            Divadelní společnost Cestovadélko vám nabízí netradiční divadelní
+            představení, které děti nejen pobaví, ale i poučí.
+          </p>
+          <p>
+            Tématem představení „Jak Pimpilimpi a Pompolompo zachránili Zemi“ je
+            velice aktuální problém, a to nakládání s odpady.
+          </p>
+          <p>
+            Mimozemšťané Pimpilimpi a Pompolompo z planety Pumpulumpu přiletí na
+            Zemi, která má problém s odpadky. Naučí lidi třídit odpad, utkají se
+            s padouchem Špínachňapem, který touží, aby Zemi odpadky úplně
+            zavalily a vysvětlí, že se ze starých věcí dají vyrobit nové.
+            Prostřednictvím veselých písniček si děti lehce zapamatují, jaký
+            odpad, do které sběrné nádoby patří a že se mají starat o pořádek
+            kolem sebe.
+          </p>
+          <div class="foto-predstaveni">
+            <iframe
+              width="33%"
+              height="180px"
+              src="https://www.youtube.com/embed/m6SnYD8JlUE?si=7EDRMxFcLoyUZEAY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <img src="images/louceni-s-letem-benesolivercz-040.JPG" alt="" />
+            <img src="images/IMG_3697.JPEG" alt="" />
+          </div>
+        </div>
+
+        <div class="one" id="telo">
+          <h3>Jak Pompolompo poznal lidské tělo</h3>
+          <p>
+            Divadelní společnost Cestovadélko vám nabízí netradiční divadelní
+            představení, které děti nejen pobaví, ale i poučí.
+          </p>
+          <p>
+            Tématem představení „Jak Pompolompo poznal lidské tělo“ je
+            muzikálová pohádka, ve které je spousta veselých, edukačních
+            písniček.
+          </p>
+          <p>
+            Mimozemšťané Pimpilimpi a Pompolompo z planety Pumpulumpu přiletí na
+            Zemi, protože slyšeli volání o pomoc. Na planetě Zemi se seznámí s
+            kostrou, srdíčkem a mozkem. Stanou se přáteli a dozví se o nich
+            spoustu věcí.
+          </p>
+          <p>
+            Prostřednictvím veselých písniček si děti lehce zapamatují, jaké má
+            člověk v těle orgány a jak fungují. Dozví se, že musí jíst zdravé
+            věci a dodržovat správnou hygienu.
+          </p>
+        </div>
+
+        <div class="one" id="zima">
+          <h3>Kačenka má ráda zimu (hrajeme Listopad až Leden)</h3>
+          <p>
+            Divadelní společnost Cestovadélko vám nabízí netradiční divadelní
+            představení, které děti nejen pobaví, ale i poučí.
+          </p>
+          <p>
+            V představení „Kačenka má ráda zimu“ se děti formou zábavného
+            muzikálu seznámí se všemi zimními svátky od sv. Martina až po oslavy
+            Nového roku, dozví se, jaké tradice se dodržují, přivítají Martina
+            na bílém koni, popovídají si s Mikulášem, budou čekat na Ježíška,
+            rozbalí si dárečky pod stromečkem, zopakují si všechny zimní sporty
+            a zazpívají si veselé písničky.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Adam Pospíšek</p>
+    </footer>
+    <script>
+      const navbar = document.getElementById("navbar");
+      const navTrigger = document.getElementById("nav-trigger");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            navbar.classList.add("sticky");
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        });
+      });
+
+      observer.observe(navTrigger);
+    </script>
+  </body>
+</html>
