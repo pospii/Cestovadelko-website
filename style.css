@@ -102,9 +102,10 @@ header p {
 }
 
 #nav-trigger {
-    height: 1px; /* malý neviditelný prvek nad navigací */
-  }
-  
+    height: 1px;
+    /* malý neviditelný prvek nad navigací */
+}
+
 
 /* Navigace */
 nav {
@@ -115,16 +116,17 @@ nav {
     transition: all 0.4s ease;
     position: relative;
     z-index: 1000;
-  
+
     /* FLEXBOX NASTAVENÍ */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 80px; /* prostor vlevo/vpravo */
-  }
-  
-  /* Levý nadpis */
-  .cestovadelko-nav {
+    padding: 0 80px;
+    /* prostor vlevo/vpravo */
+}
+
+/* Levý nadpis */
+.cestovadelko-nav {
     font-size: 24px;
     color: white;
     opacity: 0;
@@ -133,47 +135,70 @@ nav {
     white-space: nowrap;
     font-family: barrio;
     width: 0;
-  }
+}
 
-  .cestovadelko-nav a{
+.cestovadelko-nav a {
     text-decoration: none;
     color: white;
-  }
-  
-  /* Aktivace nadpisu při sticky */
-  nav.sticky .cestovadelko-nav {
+}
+
+/* Aktivace nadpisu při sticky */
+nav.sticky .cestovadelko-nav {
     opacity: 1;
     visibility: visible;
     width: auto;
-  }
-  
-  /* Navigace uprostřed */
-  nav ul {
+}
+
+/* Navigace uprostřed */
+nav ul {
     display: flex;
     justify-content: center;
-    flex: 1; /* zabere celý středový prostor */
+    flex: 1;
+    /* zabere celý středový prostor */
     list-style: none;
     margin: 0;
     padding: 0;
     transition: all 0.4s ease;
-  }
-  
-  /* Položky v navigaci */
-  nav ul li a {
+}
+
+nav ul li{
+    padding: 15px 26px;
+}
+
+/* Položky v navigaci */
+nav ul li a {
+    position: relative;
     display: block;
-    padding: 15px 28px;
+    padding: 0 2px;
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    transition: all 0.4s ease;
-  }
-  
-  nav ul li a:hover {
-    background-color: #2D3142;
-  }
-  
-  /* Sticky efekty */
-  nav.sticky {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+    background-image: linear-gradient(to right, #ffffff 0%, #ffffff 25%, transparent 25%, transparent 50%, #FFDA2A 50%, #FFDA2A 75%, transparent 75%, transparent 100%);
+    background-size: 16px 4px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-out;
+}
+
+/* Hover efekt: rozbalení vlnky */
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Sticky efekty */
+nav.sticky {
     position: fixed;
     top: 0;
     left: 0;
@@ -181,13 +206,13 @@ nav {
     margin-top: 0;
     border-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  nav.sticky ul li a {
+}
+
+nav.sticky ul li{
     padding: 18px 30px;
     font-size: 19px;
-  }
-  
+}
+
 
 
 
@@ -209,7 +234,7 @@ main {
     margin-right: auto;
     margin-left: auto;
     max-width: 900px;
-    
+
 }
 
 .box h2 {
@@ -217,9 +242,9 @@ main {
     margin-bottom: 15px;
 }
 
-.uvod{
+.uvod {
     text-align: center;
-    
+
 }
 
 .vitejte p {
@@ -231,6 +256,16 @@ main {
 .vlacek img {
     width: 180px;
     height: auto;
+    transition: transform 0.6s ease;
+    margin-bottom: 25px;
+}
+
+.vlacek img:hover{
+    transform: rotate(360deg);
+}
+
+.popis-uvod{
+    font-size: 21px;
 }
 
 .program ul {
@@ -247,15 +282,16 @@ main {
     text-align: center;
 }
 
-.nabidka-obrazek{
+.nabidka-obrazek {
     overflow: hidden;
-  border-radius: 10px; /* volitelné pro zaoblení */
-  height: 250px;
-  width: 250px;
-  margin-bottom: 12px;
+    border-radius: 10px;
+    /* volitelné pro zaoblení */
+    height: 250px;
+    width: 250px;
+    margin-bottom: 12px;
 }
 
-.nabidka-obrazek:hover img{
+.nabidka-obrazek:hover img {
     transform: scale(1.1);
 }
 
@@ -266,7 +302,8 @@ main {
     /* volitelné, pokud chceš oblé rohy */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* volitelné, pokud chceš lehký stín */
-    transition: transform 0.4s ease; /* plynulý efekt */
+    transition: transform 0.4s ease;
+    /* plynulý efekt */
 }
 
 .nabidka p {
@@ -299,17 +336,17 @@ main {
             rgba(0, 0, 0, 0) 100%);
 }
 
-.nabidka a{
+.nabidka a {
     text-decoration: none;
     color: #2D3142;
     transition: color 0.4s ease;
 }
 
-.nabidka a:hover{
+.nabidka a:hover {
     color: #38B6FF;
 }
 
-.odkaz-predstaveni{
+.odkaz-predstaveni {
     text-align: center;
     margin: auto;
     padding: 10px 18px;
@@ -319,34 +356,34 @@ main {
     transition: background 0.4s ease;
 }
 
-.odkaz-predstaveni a{
+.odkaz-predstaveni a {
     color: #D0F4FF;
     text-decoration: none;
 }
 
-.odkaz-predstaveni:hover{
+.odkaz-predstaveni:hover {
     background-color: #1d8bca;
 }
 
-.ucinkujici img{
+.ucinkujici img {
     width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.ucinkujici{
+.ucinkujici {
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-bottom: 20px;
 }
 
-.herci{
-display: flex;
-text-align: center;
-gap: 5%;
-justify-content: center;
+.herci {
+    display: flex;
+    text-align: center;
+    gap: 5%;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -357,6 +394,8 @@ footer {
     font-size: 0.9em;
     color: #666;
 }
+
+/* Sekce Představení  */
 
 header .header-nadpis.head-predstaveni {
     height: 24vh;
@@ -394,25 +433,136 @@ header .header-nadpis.head-predstaveni {
     margin-bottom: 30px;
 }
 
-.one{
-    border: #2D3142;
-    border-style: solid;
-    border-radius: 10px;
+.one {
+    border: 2px dashed #2D3142;
     padding: 30px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.142);
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 7px 7px 0px #FFB703;
+    transition: background 0.5s ease;
 }
 
-.foto-predstaveni{
+.one:hover {
+    background-color: rgba(255, 255, 255, 0.216);
+}
+
+.foto-predstaveni {
     display: flex;
-    gap: 15px;
+    gap: 2%;
+    width: 98%;
+    align-items: stretch;
 }
 
-.one img{
-    width: 30%;
-    height: auto;
+.one video, .one img, .one iframe {
+    width: 32%;
+    aspect-ratio: 4 / 3;
+    /* udrží stejný poměr stran */
+    object-fit: cover;
     border-radius: 10px;
 }
 
-iframe{
+.one img,
+.one video,
+.one iframe {
+    width: 32%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.one img:hover,
+.one video:hover,
+.one iframe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+iframe {
     margin: 0;
 }
+
+/* Sekce Ukázky  */
+
+.ukazky h2, .spotify h2{
+    text-align: center;
+}
+
+.vidfot{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ukazky video, .ukazky img{
+    width: 32%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.spotify iframe{
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+/* Kontakt */
+
+.kontakt {
+    background-color: #fff8d68b;
+    border-radius: 25px;
+    padding: 30px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .kontakt h2 {
+    margin-bottom: 20px;
+    color: #E63946;
+  }
+  
+  .kontakt-info p {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .kontakt-info i {
+    margin-right: 8px;
+    color: #E63946;
+  }
+  
+  .kontakt-info a {
+    text-decoration: none;
+    color: #2D3142;
+    transition: color 0.3s ease;
+  }
+  
+  .kontakt-info a:hover {
+    color: #E63946;
+  }
+
+  .objedavani p{
+    text-decoration: underline;
+    margin-top: 25px;
+  }
+
+  .socialni{
+    margin-top: 25px;
+  }
+
+  .socialni strong{
+    font-weight: 600;
+  }
+  

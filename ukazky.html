@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cestovadélko" />
+    <meta name="author" content="Adam Pospíšek" />
+    <meta name="keywords" content="Cestovadélko" />
+    <title>Cestovadélko - Pimpilimpi a Pompolompo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barriecito&family=Barrio&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-nadpis head-predstaveni">
+        <h1>Cestovadélko</h1>
+        <p>Ukázky z představení</p>
+      </div>
+      <div id="nav-trigger"></div>
+      <!-- neviditelný prvek, kde sledujeme průchod -->
+      <nav id="navbar">
+        <div class="cestovadelko-nav">
+          <a href="index.html">Cestovadélko</a>
+        </div>
+        <ul>
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="predstaveni.html">Představení</a></li>
+          <li><a href="ukazky.html">Ukázky</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="home">
+      <section class="ukazky box">
+        <h2>Ukázky z představení</h2>
+        <div class="vidfot">
+          <video src="videos/telo.webm" controls preload="metadata">
+            Váš prohlížeč nepodporuje přehrávání videa.
+          </video>
+          <video
+            src="images/IMG_4662.MOV"
+            controls
+            preload="metadata"
+          >
+            Váš prohlížeč nepodporuje přehrávání videa.
+          </video>
+          <video
+            src="videos/vanocni-koulovacka.webm"
+            controls
+            preload="metadata"
+          >
+            Váš prohlížeč nepodporuje přehrávání videa.
+          </video>
+          <img src="images/ukazka-foto.JPEG" alt="" />
+          <img src="images/ukazka-rano.JPG" alt="" />
+          <img src="images/ukazka-povidani.JPEG" alt="" />
+        </div>
+      </section>
+
+      <section class="spotify box">
+        <h2>Spotify</h2>
+        <iframe 
+          src="https://open.spotify.com/embed/artist/6EW46wwHUbg0S1A1L8YmIY?utm_source=generator"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </section>
+      <section class="instagram"></section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Adam Pospíšek</p>
+    </footer>
+    <script>
+      const navbar = document.getElementById("navbar");
+      const navTrigger = document.getElementById("nav-trigger");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            navbar.classList.add("sticky");
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        });
+      });
+
+      observer.observe(navTrigger);
+    </script>
+  </body>
+</html>
