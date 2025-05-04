@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Cestovadélko" />
+    <meta name="description" content="Kontakt - Divadlo Cestovadélko." />
     <meta name="author" content="Adam Pospíšek" />
-    <meta name="keywords" content="Cestovadélko" />
+    <meta
+      name="keywords"
+      content="divadlo pro děti, Cestovadélko, Pimpilimpi, Pompolompo, dětské představení"
+    />
     <title>Cestovadélko - Pimpilimpi a Pompolompo</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/responsible.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barriecito&family=Barrio&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barrio&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -30,6 +32,7 @@
         <div class="cestovadelko-nav">
           <a href="index.html">Cestovadélko</a>
         </div>
+        <button class="hamburger" id="hamburger">&#9776;</button>
         <ul>
           <li><a href="index.html">Domů</a></li>
           <li><a href="predstaveni.html">Představení</a></li>
@@ -43,7 +46,7 @@
       <section class="kontakt box">
         <h2>Kontakt</h2>
         <div class="kontakt-info">
-          <p><strong>Ředitelka divadla:</strong> Kateřina Motyčková</p>
+          <p><strong>Ředitelka divadla:</strong> Kateřina&nbsp;Motyčková</p>
           <div class="objedavani">
             <p>Představení můžete objednávat následujícími způsoby:</p>
           </div>
@@ -74,26 +77,14 @@
           </div>
         </div>
       </section>
+      <section class="spodek">
+        <div class="deco-line" id="deco-line-2"></div>
+      </section>
     </main>
 
     <footer>
       <p>&copy; 2025 Adam Pospíšek</p>
     </footer>
-    <script>
-      const navbar = document.getElementById("navbar");
-      const navTrigger = document.getElementById("nav-trigger");
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            navbar.classList.add("sticky");
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        });
-      });
-
-      observer.observe(navTrigger);
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

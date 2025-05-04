@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Cestovadélko" />
+    <meta
+      name="description"
+      content="Ukázky z divadelních představení Cestovadélko, Album Spotify Pimpilimpi a Pompolompo."
+    />
     <meta name="author" content="Adam Pospíšek" />
-    <meta name="keywords" content="Cestovadélko" />
+    <meta
+      name="keywords"
+      content="divadlo pro děti, Cestovadélko, Pimpilimpi, Pompolompo, dětské představení"
+    />
     <title>Cestovadélko - Pimpilimpi a Pompolompo</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/responsible.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barriecito&family=Barrio&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barrio&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -27,6 +36,7 @@
         <div class="cestovadelko-nav">
           <a href="index.html">Cestovadélko</a>
         </div>
+        <button class="hamburger" id="hamburger">&#9776;</button>
         <ul>
           <li><a href="index.html">Domů</a></li>
           <li><a href="predstaveni.html">Představení</a></li>
@@ -43,11 +53,7 @@
           <video src="videos/telo.webm" controls preload="metadata">
             Váš prohlížeč nepodporuje přehrávání videa.
           </video>
-          <video
-            src="images/IMG_4662.MOV"
-            controls
-            preload="metadata"
-          >
+          <video src="images/IMG_4662.MOV" controls preload="metadata">
             Váš prohlížeč nepodporuje přehrávání videa.
           </video>
           <video
@@ -65,7 +71,7 @@
 
       <section class="spotify box">
         <h2>Spotify</h2>
-        <iframe 
+        <iframe
           src="https://open.spotify.com/embed/artist/6EW46wwHUbg0S1A1L8YmIY?utm_source=generator"
           frameborder="0"
           allowfullscreen=""
@@ -74,26 +80,14 @@
         ></iframe>
       </section>
       <section class="instagram"></section>
+      <section class="spodek">
+        <div class="deco-line" id="deco-line-2"></div>
+      </section>
     </main>
 
     <footer>
       <p>&copy; 2025 Adam Pospíšek</p>
     </footer>
-    <script>
-      const navbar = document.getElementById("navbar");
-      const navTrigger = document.getElementById("nav-trigger");
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            navbar.classList.add("sticky");
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        });
-      });
-
-      observer.observe(navTrigger);
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

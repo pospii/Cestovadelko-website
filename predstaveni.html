@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Cestovadélko" />
+    <meta
+      name="description"
+      content="Nabízená představení divadla Cestovadélko - Pimpilimpi a Pompolompo."
+    />
     <meta name="author" content="Adam Pospíšek" />
-    <meta name="keywords" content="Cestovadélko" />
+    <meta
+      name="keywords"
+      content="divadlo pro děti, Cestovadélko, Pimpilimpi, Pompolompo, dětské představení"
+    />
     <title>Cestovadélko - Pimpilimpi a Pompolompo</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/responsible.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barriecito&family=Barrio&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barrio&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -26,6 +35,7 @@
         <div class="cestovadelko-nav">
           <a href="index.html">Cestovadélko</a>
         </div>
+        <button class="hamburger" id="hamburger">&#9776;</button>
         <ul>
           <li><a href="index.html">Domů</a></li>
           <li><a href="predstaveni.html">Představení</a></li>
@@ -42,6 +52,9 @@
           <p>Cestovadélko uvádí...</p>
         </div>
         <div class="one" id="zeme">
+          <img class="zeme" src="images/recycling.png" alt="" />
+          <img class="earth" src="images/earth.png" alt="" />
+          <img class="sorting" src="images/deti-tridi.png" alt="" />
           <h3>Jak Pimpilimpi a Pompolompo zachránili Zemi</h3>
           <p>
             Divadelní společnost Cestovadélko vám nabízí netradiční divadelní
@@ -75,6 +88,9 @@
         </div>
 
         <div class="one" id="telo">
+          <img class="boy" src="images/boy.png" alt="" />
+          <img class="girl" src="images/girl.png" alt="" />
+          <img class="heart" src="images/heart.png" alt="" />
           <h3>Jak Pompolompo poznal lidské tělo</h3>
           <p>
             Divadelní společnost Cestovadélko vám nabízí netradiční divadelní
@@ -106,11 +122,13 @@
             >
               Váš prohlížeč nepodporuje přehrávání videa.
             </video>
-            <img src="images/telo-predstaveni2.png" alt="">
+            <img src="images/telo-predstaveni2.png" alt="" />
           </div>
         </div>
 
         <div class="one" id="zima">
+          <img class="snowman" src="images/snowman.png" alt="" />
+          <img class="snowflake" src="images/snowflake.png" alt="" />
           <h3>Kačenka má ráda zimu (hrajeme Listopad až Leden)</h3>
           <p>
             Divadelní společnost Cestovadélko vám nabízí netradiční divadelní
@@ -143,21 +161,6 @@
     <footer>
       <p>&copy; 2025 Adam Pospíšek</p>
     </footer>
-    <script>
-      const navbar = document.getElementById("navbar");
-      const navTrigger = document.getElementById("nav-trigger");
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            navbar.classList.add("sticky");
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        });
-      });
-
-      observer.observe(navTrigger);
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

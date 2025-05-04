@@ -1,0 +1,303 @@
+@media screen and (max-width: 1200px) {
+    .one img.zeme {
+        opacity: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .one img.earth {
+        opacity: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .one img.sorting {
+        opacity: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .one img.boy {
+        opacity: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .one img.girl {
+        opacity: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .one img.heart {
+        opacity: 0;
+        top: 0;
+        right: 0;
+        ;
+    }
+
+    .one img.snowman {
+        opacity: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .one img.snowflake {
+        opacity: 0;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    nav {
+        margin-top: 15px
+    }
+
+    main {
+        margin-top: 15px;
+    }
+
+
+}
+
+/* Mobily (do 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 50px;
+    }
+
+    nav {
+        margin-top: 10px;
+        padding: 0 30px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    nav.sticky ul li {
+        padding: 18px 18px;
+        font-size: 16px;
+    }
+
+    main {
+        margin-top: 10px;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    .vitejte p {
+        font-size: 20px;
+    }
+
+    .popis-uvod {
+        font-size: 20px;
+    }
+
+    .predstaveni h3 {
+        font-size: 21px;
+        margin-bottom: 8px;
+    }
+
+    .predstaveni .one p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        display: none;
+    }
+
+    nav ul.active {
+        display: contents;
+    }
+
+    .hamburger.open {
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    nav.sticky .hamburger {
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    nav ul li {
+        padding: 10px 15px;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav ul li a {
+        width: 100%;
+    }
+
+    /* Omezit zarovnání navigace */
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .cestovadelko-nav {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    header h1 {
+        font-size: 38px;
+    }
+
+    header p {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    .box h2 {
+        font-size: 25px;
+    }
+
+    .vitejte p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .popis-uvod {
+        font-size: 18px;
+    }
+
+    .nabidka {
+        gap: 20px;
+    }
+
+    .herci {
+        gap: 15px;
+    }
+
+    .uvadi p {
+        font-size: 19px;
+        font-weight: 600;
+        margin-bottom: -15px
+    }
+
+    .predstaveni {
+        width: 95%;
+    }
+
+    .predstaveni h3 {
+        font-size: 21px;
+        margin-bottom: 8px;
+    }
+
+    .predstaveni .one p {
+        font-size: 18px;
+    }
+
+    .foto-predstaveni {
+        flex-direction: column;
+    }
+
+    .one .foto-predstaveni img,
+    .one .foto-predstaveni video,
+    .one .foto-predstaveni iframe {
+        width: 90%;
+        margin: auto;
+        z-index: 3;
+    }
+
+    .foto-predstaveni {
+        gap: 15px;
+    }
+
+    .one img.zeme {
+        opacity: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .one img.earth {
+        top: 35%;
+        left: -25%;
+        opacity: 0.7;
+    }
+
+    .one img.sorting {
+        right: -20px;
+        top: 280px;
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    .one img.boy {
+        left: -15%;
+        top: 10%;
+        opacity: 0.5;
+    }
+
+    .one img.girl {
+        right: -5%;
+        top: 20%;
+        opacity: 0.5;
+    }
+
+    .one img.heart {
+        left: -20%;
+        bottom: 50%;
+        opacity: 0.4;
+    }
+
+    .one img.snowman {
+        right: -10%;
+        top: 10%;
+        opacity: 0.3;
+    }
+
+    .one img.snowflake {
+        left: -15%;
+        top: 30%;
+        opacity: 0.4
+    }
+
+    .ukazky video, .ukazky img {
+        width: 90%;
+    }
+
+    .kontakt-info p {
+        font-size: 17px;
+    }
+}

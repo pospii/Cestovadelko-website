@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Cestovadélko">
-    <meta name="author" content="Adam Pospíšek">
-    <meta name="keywords" content="Cestovadélko">
+    <meta
+      name="description"
+      content="Divadelní představení pro děti - Pimpilimpi a Pompolompo. Cestovadélko přiváží radost, zábavu a fantazii."
+    />
+    <meta name="author" content="Adam Pospíšek" />
+    <meta
+      name="keywords"
+      content="divadlo pro děti, Cestovadélko, Pimpilimpi, Pompolompo, dětské představení"
+    />
     <title>Cestovadélko - Pimpilimpi a Pompolompo</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/responsible.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barriecito&family=Barrio&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Barrio&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -27,6 +36,7 @@
         <div class="cestovadelko-nav">
           <a href="index.html">Cestovadélko</a>
         </div>
+        <button class="hamburger" id="hamburger">&#9776;</button>
         <ul>
           <li><a href="#">Domů</a></li>
           <li><a href="predstaveni.html">Představení</a></li>
@@ -43,16 +53,19 @@
           <p>
             Náš divadelní soubor Cestovatélko nabízí dětské muzikálové
             inscenace. Přijďte se podívat na naše interaktivní vystoupení plné
-            písniček, masek a her, kde dva nejlepší kamarádi Pimpilimpi a a
+            písniček, masek a her, kde dva nejlepší kamarádi Pimpilimpi a
             Pompolompo učí děti.
           </p>
         </div>
         <div class="vlacek">
-          <img src="images/divadelko.png" alt="">
+          <img src="images/divadelko.png" alt="" />
         </div>
         <div class="popis-uvod">
-            Nabízíme vystoupení pro školky (a další)...
-            Vystoupení jsou určena pro děti od 3 do 8 let. 
+          Naše show je ideální pro školy, školky, festivaly, vánoční trhy i
+          městské slavnosti – pobaví, poučí a zaujme publikum všech věkových
+          kategorií. <br />
+          Zasmějete se, dozvíte se něco nového a nakonec si určitě řeknete o
+          přídavek.
         </div>
       </section>
 
@@ -135,26 +148,14 @@
           </div>
         </div>
       </section>
+      <section class="spodek">
+        <div class="deco-line" id="deco-line-2"></div>
+      </section>
     </main>
 
     <footer>
       <p>&copy; 2025 Adam Pospíšek</p>
     </footer>
-    <script>
-      const navbar = document.getElementById("navbar");
-      const navTrigger = document.getElementById("nav-trigger");
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            navbar.classList.add("sticky");
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        });
-      });
-
-      observer.observe(navTrigger);
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
