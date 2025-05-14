@@ -300,4 +300,8 @@
     .kontakt-info p {
         font-size: 17px;
     }
+
+    .kontakt iframe{
+        width: 100%;
+    }
 }

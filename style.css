@@ -96,6 +96,30 @@ header p {
     font-size: 25px;
 }
 
+.header-nadpis .btn-link{
+    width: fit-content;
+    padding: 8px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    border-radius: 15px;
+    font-family: Atma;
+    font-size: 17px;
+    font-weight: 500;
+    cursor:pointer;
+    background-color: #f0fa3ce0;
+    color: #2D3142;
+    transition: background 0.3s ease;
+    z-index: 2;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 0.3px;
+}
+
+.header-nadpis .btn-link:hover {
+    background-color:#FFB703;
+  }
+
 #nav-trigger {
     height: 1px;
     /* malý neviditelný prvek nad navigací */
@@ -615,6 +639,13 @@ iframe {
 
 .kontakt-info a:hover {
     color: #E63946;
+}
+
+.kontakt iframe{
+    width: 80%;
+    height: 500px;
+    border-radius: 15px;
+    opacity: 0.8;
 }
 
 .objedavani p {
